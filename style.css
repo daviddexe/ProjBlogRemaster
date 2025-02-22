@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.apresentacao p{
+     text-align: center;
+}
+
 body {
     background-color: #f8f8f2;
     margin: 5px;
@@ -48,11 +52,12 @@ section {
     bottom: 5px;
 }
 
-.apresentacao h2{
+
+.apresentacao h2 {
     color: orangered;
 }
 
-.h2Proj{
+.h2Proj {
     color: orangered;
 }
 
@@ -118,7 +123,8 @@ video {
 }
 
 
-.imgenter, .imgenter1 {
+.imgenter,
+.imgenter1 {
     width: 40%;
     transform: translateX(-100px);
     transition: all 1s ease-out;
@@ -126,20 +132,23 @@ video {
 }
 
 
-.hidden .text, .hidden .text2 {
+.hidden .text,
+.hidden .text2 {
     font-size: 24px;
     position: relative;
     width: 55%;
     transform: translateX(100px);
     transition: all 1s ease-out;
-    
+
 }
 
 
 .visible img {
     transform: translateX(0);
 }
-.visible .text, .visible .text2 {
+
+.visible .text,
+.visible .text2 {
     transform: translateX(0);
 }
 
@@ -147,17 +156,17 @@ video {
 h2 {
     text-align: center;
     font-size: 90px;
-    
+
 }
 
 p {
     font-size: 50px;
-    
+
 }
 
 .h4 {
     font-size: 20px;
-    
+
 }
 
 
@@ -204,7 +213,7 @@ p {
 
 .hero__card span img {
     max-width: 40px;
-    
+
 }
 
 .hero__card p {
@@ -219,23 +228,22 @@ p {
 
 
 @media (max-width: 768px) {
-
-    .h2Proj{
+    .h2Proj {
         color: orangered;
     }
 
-    .apresentacao{
+    .apresentacao {
         word-break: break-all;
         text-align: center;
     }
 
-    .apresentacao h2{
+    .apresentacao h2 {
         font-size: 2em;
         text-align: center;
         color: orangered;
     }
 
-    
+
     body {
         margin: 0;
     }
@@ -264,17 +272,17 @@ p {
         position: absolute;
         top: 17em;
         gap: 35px;
-        background-color: rgba(90, 80, 80, 0.705);
-        border: solid 2px orangered;
+        background-color: rgba(90, 80, 80, 0.767);
+        border: solid 2px rgb(255, 68, 0);
     }
 
     .hamburger {
         display: flex;
         position: relative;
-        bottom: 70px;
+        bottom: 80px;
         margin: auto;
-        
-        
+
+
     }
 
     video {
@@ -298,12 +306,12 @@ p {
     .icone {
         height: 200px;
         width: 90%;
-        margin: 10px 0;
+    
     }
 
     h2 {
         font-size: 50px;
-        
+
     }
 
     p {
@@ -314,23 +322,47 @@ p {
         font-size: 20px;
     }
 
-    .imgenter, .imgenter1 {
+    .imgenter,
+    .imgenter1 {
         width: 80%;
     }
 
-    .hidden .text, .hidden .text2 {
+    .hidden .text,
+    .hidden .text2 {
         width: 80%;
         font-size: 18px;
     }
 
     .hero__container {
-        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas em telas menores */
+        grid-template-columns: repeat(2, 1fr);
+        /* Ajuste para 2 colunas em telas menores */
         top: 150px;
         position: relative;
         min-height: 100vh;
         text-align: center;
     }
-     
+    .divcardFounder{
+        width: 100%;
+    
+    }
+    
+    .cardFounder{
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top: 160px;
+        
+    }
+    
+    .divTextFounder{
+        top: 60px;
+        text-align: center;
+        position: relative;
+    
+    
+    }
+
 
 
 }
@@ -356,16 +388,100 @@ p {
         font-size: 18px;
     }
 
-    .imgenter, .imgenter1 {
+    .imgenter,
+    .imgenter1 {
         width: 90%;
     }
 
-    .hidden .text, .hidden .text2 {
+    .hidden .text,
+    .hidden .text2 {
         width: 90%;
         font-size: 16px;
     }
 
     .hero__container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+
+
+/* Estilos para a seção do fundador */
+.divCardFounder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cardFounder {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 68, 0, 0.76);
+}
+
+.divTextFounder {
+    max-width: 600px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.divTextFounder h1 {
+    font-size: 3rem;
+    color: orangered;
+    margin-bottom: 1rem;
+}
+
+.divTextFounder p {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #333;
+    
+}
+
+
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .divCardFounder {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .cardFounder {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1rem;
+        bottom: 100px;
+        position: relative;
+        margin-bottom: 150px;
+        
+    
+        
+    }
+
+    .divTextFounder {
+        text-align: center;
+        position: relative;
+        top: 1px;
+    }
+
+    .divTextFounder h1 {
+        font-size: 2rem;
+        
+    }
+
+    .divTextFounder p {
+        font-size: 1rem;
     }
 }
+
