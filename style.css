@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 
-.apresentacao p{
-     text-align: center;
+.apresentacao p {
+    text-align: center;
 }
 
 body {
@@ -306,7 +306,7 @@ p {
     .icone {
         height: 200px;
         width: 90%;
-    
+
     }
 
     h2 {
@@ -335,32 +335,34 @@ p {
 
     .hero__container {
         grid-template-columns: repeat(2, 1fr);
-        /* Ajuste para 2 colunas em telas menores */
+        /*2 colunas em telas menores*/
         top: 150px;
         position: relative;
         min-height: 100vh;
         text-align: center;
     }
-    .divcardFounder{
+
+    .divcardFounder {
         width: 100%;
-    
+
+
     }
-    
-    .cardFounder{
+
+    .cardFounder {
         border-radius: 50%;
         width: 250px;
         height: 250px;
         position: relative;
-        top: 160px;
-        
+        top: 190px;
+
     }
-    
-    .divTextFounder{
+
+    .divTextFounder {
         top: 60px;
         text-align: center;
         position: relative;
-    
-    
+
+
     }
 
 
@@ -403,12 +405,12 @@ p {
         grid-template-columns: 1fr;
     }
 
-    
+
 }
 
 
 
-/* Estilos para a seção do fundador */
+
 .divCardFounder {
     display: flex;
     justify-content: center;
@@ -417,6 +419,7 @@ p {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .cardFounder {
@@ -443,18 +446,18 @@ p {
     font-size: 2rem;
     line-height: 1.5;
     color: #333;
-    
+
 }
 
 
 
 
-/* Ajustes para telas menores */
+
 @media (max-width: 768px) {
     .divCardFounder {
         flex-direction: column;
         text-align: center;
-        
+
     }
 
     .cardFounder {
@@ -464,9 +467,9 @@ p {
         bottom: 100px;
         position: relative;
         margin-bottom: 150px;
-        
-    
-        
+
+
+
     }
 
     .divTextFounder {
@@ -477,7 +480,7 @@ p {
 
     .divTextFounder h1 {
         font-size: 2rem;
-        
+
     }
 
     .divTextFounder p {
@@ -485,3 +488,97 @@ p {
     }
 }
 
+
+#contact {
+    position: relative;
+    background: #ffffff3a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 50px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 400px;
+    padding: 10px;
+    height: 40px;
+    border: 1px solid #080000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    background: #ff8800;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #df6704;
+}
+
+@media (max-width: 768px) {
+    #contact {
+        top: 20px;
+        padding: 10px;
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+        width: 300px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        top: 10px;
+        padding: 5px;
+    }
+
+    input,
+    textarea {
+        padding: 5px;
+        width: 300px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    button {
+        height: 35px;
+        padding: 5px;
+        font-size: 12px;
+    }
+}
