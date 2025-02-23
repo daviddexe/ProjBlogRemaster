@@ -24,15 +24,28 @@ elements.forEach((element) => myOserver.observe(element))
 
 
 
-function sendMail() {
+
+function sendMail(event) {
+    event.preventDefault();  
+
+    
     let parms = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value,
-        
-    }
+    };
 
-     emailjs.send("service_zvkfgaa", "template_y42kkaz", parms).then(alert("E-mail Enviado"))
+  
+    emailjs.send("service_zvkfgaa", "template_y42kkaz", parms).then(
+        function(response) {
+            alert("E-mail Enviado com Sucesso!"); // Sucesso
+        },
+    );
 }
+
+
+document.getElementById("contactForm").addEventListener("submit", sendMail);
+
+
 
