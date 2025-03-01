@@ -13,6 +13,7 @@
 body {
     background-color: #f8f8f2;
     margin: 5px;
+   
 }
 
 
@@ -680,3 +681,132 @@ footer {
 }
 
 
+
+
+.carousel {
+    width: 100%;
+    height: 800px;
+    min-height: 300px; 
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: solid 1px orangered;
+    position: relative;
+    top: 90px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.carousel-item img {
+    width: 90%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.controls {
+    position: absolute;
+    top: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.controls button {
+    background: rgba(0, 0, 0, 0.5);
+    color: orange;
+    border: solid 2px orangered;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px;
+}
+
+.controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+@media (max-width: 768px) {
+    .carousel {
+        min-height: 300px; 
+    }
+
+    .carousel-item img {
+        width: 85%;
+    }
+
+    .controls button {
+        padding: 8px; 
+        font-size: 14px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 400px;
+        min-height: 250px; 
+        border-radius: 5px; 
+    }
+
+    .carousel-item img {
+        width: 90%; 
+        height: 300px;
+    }
+
+    .controls {
+        padding: 0 10px; 
+        top: 93%;
+    }
+
+    .controls button {
+        padding: 6px; 
+        font-size: 12px; 
+    }
+
+    .active {
+        transform: scale(1.02); 
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin: 0; /
+}
+
+.emaildavid {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.emaildavid:hover {
+    color: inherit; 
+    text-decoration: underline; 
+}
