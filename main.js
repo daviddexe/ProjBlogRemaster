@@ -45,6 +45,24 @@ function sendMail(event) {
 }
 
 
+
+let inputs = document.querySelectorAll("input, textarea"); 
+let botao = document.getElementById("botao");
+
+function validarCampos() {
+    let vazio = Array.from(inputs).some(input => input.value.trim() === '');
+    botao.disabled = vazio;
+}
+
+
+inputs.forEach(input => input.addEventListener("input", validarCampos));
+
+
+validarCampos();
+
+
+
+
 document.getElementById("contactForm").addEventListener("submit", sendMail);
 
 const carouselContainer = document.querySelector('.carousel-container');
